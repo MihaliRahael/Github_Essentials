@@ -35,7 +35,8 @@ Example for a task
 
 Say I have created a Python library which have few contributors and users of that library. Whenever a use of library sees that a new release of library has a bug or somethings isn’t working, they can create an issue. I have to check the issue and sort it under minor or major or is it reproduceable etc. They I can assign this issue to a contributor or I can take it myself. Lets say one of the contributor has fixed the issue and raised a pull request, so that I can merge it with the next release of the library. So I will check the pull request, review the code, bug fixing etc and then will merge it to the master branch. So, I will be releasing it in the next version, so the users can upgrade the version.
 
-![](media/916a2c9e45fc98f65daad22d4c518ea7.png)
+![image](https://user-images.githubusercontent.com/106816732/213276664-bca6751f-431b-41c5-b31b-1207bff6c236.png)
+
 
 So after the pull request is merged with the master branch, I need to build a pipeline which will test my code, build my artifact and deployment. Moreover I need to prepare some release notes where I can document about what got added in the new version, and need to update the version number.
 
