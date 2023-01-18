@@ -1,6 +1,6 @@
-**Github and Github Actions Essentials**
+# Github and Github Actions Essentials
 
-**Contents**
+## Contents
 
 -   Need for GitHub
 -   Git basic operations
@@ -27,7 +27,7 @@
 -   Jobs
 -   Build docker image and push to private repo
 
-**Need for GitHub**
+## Need for GitHub
 
 Github is a platform for open-source projects. Lot of developers who have developed their own libraries for python or other languages, can host their projects on github and make them publicly available so that the community can use the projects also they can contribute to the project. So team or individual developers manage those project can new contributors or things happening inside their repository like creating pull requests, new people joining in as contributors and so on, they have a lot of organizational tasks to manage.
 
@@ -121,10 +121,10 @@ Once the merging is done we don’t need to add or commit the files cos that is 
 
 **Other important git commands**
 
--   **git branch**  \# now the o/p would be master which is the default branch created while creating a repo.
+-   **git branch** \# now the o/p would be master which is the default branch created while creating a repo.
 -   **git branch -M main** \# now the o/p of ‘git branch’ would be main. Changed master to main branch
 -   **git remote add origin** [**https://github.com/bonnyphilip/repo_name.git**](https://github.com/bonnyphilip/repo_name.git) \#we will do the committing into this url
--   **git log \#**for checking logs
+-   \*\*git log \#\*\*for checking logs
 -   **git restore –staged .** \# this will unstage the file
 
 **Error Note :** Whenever we run a git command in CMD (windows or in visual studio code), if we face an error saying “‘git’ is not recognized as an internal or external command”, follow the steps.
@@ -148,9 +148,9 @@ Conflict scenario 1 : Bonny has made changes. Now Bonny is one commit ahead of S
 -   **git status -** will show the unmerged file from main
 -   **git commit -m “merging main”** – merge steffy’s branch with main branch
 -   **git push origin main –** now steffy pushing the changes made by her
--   **Go to git hub  Sync Fork  Discard commits –** Now she can see both the changes made by Bonny and herself.
+-   **Go to git hub Sync Fork Discard commits –** Now she can see both the changes made by Bonny and herself.
 -   **Steffy should raise pull request. -** Bonny will be able to see the pull request in his git hub. He can check the changes made by steffy. Then he can do merge pull request in git hub itself.
--   Once merging completed from Bonny’s side, main branch is updated with all the changes made by Bonny and Steffy. No Steffy’s branch needs to be in sync with Bonny’s main branch. So steffy needs to do **Synch Fork  Update branch**
+-   Once merging completed from Bonny’s side, main branch is updated with all the changes made by Bonny and Steffy. No Steffy’s branch needs to be in sync with Bonny’s main branch. So steffy needs to do **Synch Fork Update branch**
 
 **Resolving conflict scenarios**
 
