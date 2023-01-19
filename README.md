@@ -35,15 +35,15 @@ Example for a task
 
 Say I have created a Python library which have few contributors and users of that library. Whenever a use of library sees that a new release of library has a bug or somethings isn’t working, they can create an issue. I have to check the issue and sort it under minor or major or is it reproduceable etc. They I can assign this issue to a contributor or I can take it myself. Lets say one of the contributor has fixed the issue and raised a pull request, so that I can merge it with the next release of the library. So I will check the pull request, review the code, bug fixing etc and then will merge it to the master branch. So, I will be releasing it in the next version, so the users can upgrade the version.
 
-![](media/916a2c9e45fc98f65daad22d4c518ea7.png)
+![image](https://user-images.githubusercontent.com/106816732/213403448-4eef940f-9333-4ede-b841-b2fc850185a9.png)
 
 So after the pull request is merged with the master branch, I need to build a pipeline which will test my code, build my artifact and deployment. Moreover I need to prepare some release notes where I can document about what got added in the new version, and need to update the version number.
 
-![](media/1c0d47b508ec8d3c2141eedde8e6c932.png)
+![image](https://user-images.githubusercontent.com/106816732/213403737-67aee21f-8b4c-4919-b62c-41af8b67746c.png)
 
 So the following screenshots shows some of the workflows I need to do as a maintainer of this repository.
 
-![](media/33eb96fbb5171af971c59f43104e116b.png)
+![image](https://user-images.githubusercontent.com/106816732/213403784-1a286370-f536-4ada-a19d-8384bd3bbe77.png)
 
 Suppose project is getting bigger, more contributors are joining, more issues and pull requests are getting created, the more organizational effort its going to be. So I want to automate these managerial tasks as much as possible. For that purpose Github actions is created (Tutorial follows below)
 
@@ -160,15 +160,14 @@ Say I have a repo having main as default branch. Create a new branch dev ie we h
 
 In GitHub desktop, I have created a new branch dev. Inorder to see that branch in CLI, use command “**git branch -r** “. Use “**git switch dev**” to switch to that branch. Create new file dev.txt in dev branch without syncing the main branch.
 
-![](media/ed92a004c9a3a6c9833e7f7540d72c50.png)
-
+![image](https://user-images.githubusercontent.com/106816732/213404004-92edb9fb-b219-468a-9093-0ea6f3dc5fbb.png)
 Now go to desktop.
 
-![](media/b854e93954c75f38eea1cc86f4f96849.png)
+![image](https://user-images.githubusercontent.com/106816732/213404049-53666cc8-76c4-4cef-a73e-c428a9f1d91f.png)
 
-![](media/1eb175bef5651f4da51e21510c5d65c9.png)
+![image](https://user-images.githubusercontent.com/106816732/213404083-03285057-a083-485c-acc6-10b012e34a6d.png)
 
-![](media/d25ee0f0f17ae059b4d3da36f05c5ace.png)
+![image](https://user-images.githubusercontent.com/106816732/213404127-93ecf320-1198-49e0-b825-1eee01824382.png)
 
 We were able to raise the PR and merge it with main without any issue just cos, both file are different.
 
@@ -187,11 +186,11 @@ Now lets see both dev and main are working in same file index.txt. First lets me
 -   ls -a - contains .git/ which indicates this is my working or project directory. Also we can see (master) means master branch has been created.
 -   git status
 
-![](media/d99c06d3c4574b5ebdd2299bfebf0885.png)
+![image](https://user-images.githubusercontent.com/106816732/213404181-21996e88-261a-41b3-8cd5-bc5a9da22125.png)
 
 -   vi file.txt - create file and check status
 
-![](media/fd5f1d37d22a88540d2070964a589ce9.png)
+![image](https://user-images.githubusercontent.com/106816732/213404223-01fc27a7-b822-4220-ad2c-3612b64ef463.png)
 
 1.  **Cloning a remote repo**
 -   git clone \<URL\>
@@ -243,7 +242,7 @@ Commands
 
 Suppose we have made some changes in files, and commited it. Git log shows, there is a commit happened after versioning.
 
-![](media/19f2deae97e9d2f39d6445011a25fc40.png)
+![image](https://user-images.githubusercontent.com/106816732/213404285-3a3f1139-b7c2-42e8-b0df-a0e4e98543ac.png)
 
 -   git tag v1.0.2 : this is light weighted tag without giving any message
 -   If we want to tag a specific commit
@@ -270,7 +269,7 @@ Branches allow you to work on different parts of the project without impacting t
 
 Note : Open both VS code and terminal to see changes.
 
-![](media/d3ef525cdf90448df31880283cd6650b.png)
+![image](https://user-images.githubusercontent.com/106816732/213404323-ddae17bc-ed03-4529-b8a0-087b6f5815ae.png))
 
 Explanation :
 
@@ -284,7 +283,7 @@ Explanation :
 
 Note : before merging, HEAD was at master branch. Once we made 3 commits in feature branch, feature branch is commits ahead of master. Once we have done the merging, HEAD will shift from master to (master, feature) (This can be viewed by git log --oneline --graph --all)
 
-![](media/543477824855d4eafef7af51c5d3e89f.png)
+![image](https://user-images.githubusercontent.com/106816732/213404365-a44ad965-c5ff-46c9-a13d-4728293e6bc8.png)
 
 There are two types of merging; fast forward merging and regular merging. Here ‘feature’ branch is aligned with the master so merging done is called fast forward merging. Dev branch is diverged and merging of this branch to master is called as regular merging.
 
@@ -301,7 +300,7 @@ There are two types of merging; fast forward merging and regular merging. Here �
 
 ### Working with remote directory
 
-![](media/d1f7014c2467f19837260423e7efd7ed.png)
+![image](https://user-images.githubusercontent.com/106816732/213404421-c6cd360c-88a2-441a-a0f7-b91bdceca9f6.png)
 
 ### Pull Requests
 
@@ -323,7 +322,7 @@ While working in a big team, its not a good practice to merge your work directly
 
 This is for applying some commit from one branch into another branch. When we do cherry picking, it brings in changes from a specific commit or we choose one or more commits.
 
-![](media/cf63659a836e0b780bec85840f73100d.png)
+![image](https://user-images.githubusercontent.com/106816732/213404465-0a859b1c-1cb2-47be-9184-d6531019ad5c.png)
 
 -   Say we have created two files cherry.txt and mango.txt in the test_branch. Do the commit one by one. Each commit will be having its own SHA id.
 -   Switch to master. Run git log --oneline to find the recent commits and its respective SHA ids
@@ -336,27 +335,27 @@ This is for applying some commit from one branch into another branch. When we do
 -   Platform to automate software development workflows
 -   CI/CD is one of many workflows
 
-![](media/0bdb45a0e05bf3f5d3c792d55100a57a.png)
+![image](https://user-images.githubusercontent.com/106816732/213404495-bd863b0b-4f33-48b5-9eff-86051f2fbcb0.png)
 
 So when you automate these flows, the concept is nothing but listen to the event and trigger workflow.
 
 Eg: If someone creates an issue, we want to automatically sort the issue, label it, assign it or write a code to reproduce it etc. All thse can be automated using Actions. Each of these small tasks automatically trigger is a separate action. Combination of these actions makes up workflow.
 
-![](media/7cccaf3863c6496447fd9b94dbe585f6.png)
+![image](https://user-images.githubusercontent.com/106816732/213404533-a62a0f61-3a92-4dc7-8c69-f35a4179b77f.png)
 
 Consider a private repository project on GitHub. The most common workflow for the repo is CICD pipeline.
 
-![](media/7986cbe1c8988d2d3382c7b721418cbb.png)
+![image](https://user-images.githubusercontent.com/106816732/213404578-9e8d0048-9137-43f9-a9fc-712600b00784.png)
 
 **Why Git hub actions, why not Jenkins?**
 
-![](media/fab5918989596a2a75db159519901685.png)
+![image](https://user-images.githubusercontent.com/106816732/213404613-f878227b-563e-4d28-9fdd-d85532f6f898.png)
 
 Tool for developers means, team doesn’t need another resource for doing CICD pipeline, developers themselves can manage.
 
-![](media/50d1cd47ae450b8267665810f338841b.png)
+![image](https://user-images.githubusercontent.com/106816732/213404658-02538ee3-dc96-465e-abd0-bf474bbcddc4.png)
 
-![](media/95ca2456c27aa5b601f0226bfe9bbd12.png)
+![image](https://user-images.githubusercontent.com/106816732/213404683-26213693-c8cc-4cad-a5e2-c12263371507.png))
 
 Basically we may have different combinations of tools we are using in development process. We don’t need to sit there configure the CICD pipeline with all these tools, like installing Python, Docker, Configure integrations and plugins, AWS etc. Instead we can ask for an environment with node and docker available, with a version I specify, and simply connect to target and deploy. This is what possible through github Actions.
 
@@ -368,17 +367,17 @@ Step 1: Push all the project files into the repository
 
 ### Workflow file syntax
 
-![](media/8e1f34958b8185195f914ec801641a68.png)
+![image](https://user-images.githubusercontent.com/106816732/213404721-dc73b938-eb39-44ac-97c7-e30af17c87f0.png)
 
-![](media/208f403eaf2b0dc2efb850da199acbfb.png)
+![image](https://user-images.githubusercontent.com/106816732/213404761-c0c7d545-2cd5-48e3-883a-6db197dbd67f.png)
 
-![](media/b30df2a513fcdbbdb2d735e00ca7a41a.png)
+![image](https://user-images.githubusercontent.com/106816732/213404794-6a97ff4d-a90f-49d2-a004-8d2e929853df.png)
 
 Whenever any event or events happens we can trigger the workflow (which can be an action or combination of actions) defined inside ‘jobs’. Eg: Here if there is a ‘push’ or ‘pull’ happens wrt main branch, the workflow will initiate. Another example for events can be creating an issue or a contributor joining etc.
 
 Another on condition :
 
-![](media/67845e0a4ebad446dfc15f24d9849862.png)
+![image](https://user-images.githubusercontent.com/106816732/213404865-a13931ed-c2b5-4555-a0bd-565ed3f66b92.png)
 
 <https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows>
 
@@ -388,7 +387,7 @@ Go to github.com/actions we can see predefined repositories.
 
 ### Jobs
 
-![](media/6108acbde97d29318b1325decebff668.png)
+![image](https://user-images.githubusercontent.com/106816732/213404904-939d9580-3b55-4192-84af-9802201221d9.png)
 
 The codes will get checked out, java version gets installed, and build gradle. All these tasks will be done in same environment.
 
@@ -398,7 +397,7 @@ runs-on: ubuntu-latest
 
 servers makes available for workflows by Github is available in ubuntu, windows and macOS. Say we have an application needs to be shipped into all three OS. We can test the releases or commits in all 3 OS.
 
-![](media/18c70b2ea994e669fa6434dbad406d16.png)
+![image](https://user-images.githubusercontent.com/106816732/213404942-22e4fd84-d42a-41f8-9d67-b6697c987453.png)
 
 ### Build docker image and push to private repo
 
