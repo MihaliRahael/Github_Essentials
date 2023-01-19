@@ -35,8 +35,7 @@ Example for a task
 
 Say I have created a Python library which have few contributors and users of that library. Whenever a use of library sees that a new release of library has a bug or somethings isn’t working, they can create an issue. I have to check the issue and sort it under minor or major or is it reproduceable etc. They I can assign this issue to a contributor or I can take it myself. Lets say one of the contributor has fixed the issue and raised a pull request, so that I can merge it with the next release of the library. So I will check the pull request, review the code, bug fixing etc and then will merge it to the master branch. So, I will be releasing it in the next version, so the users can upgrade the version.
 
-![image](https://user-images.githubusercontent.com/106816732/213276664-bca6751f-431b-41c5-b31b-1207bff6c236.png)
-
+![](media/916a2c9e45fc98f65daad22d4c518ea7.png)
 
 So after the pull request is merged with the master branch, I need to build a pipeline which will test my code, build my artifact and deployment. Moreover I need to prepare some release notes where I can document about what got added in the new version, and need to update the version number.
 
@@ -48,7 +47,7 @@ So the following screenshots shows some of the workflows I need to do as a maint
 
 Suppose project is getting bigger, more contributors are joining, more issues and pull requests are getting created, the more organizational effort its going to be. So I want to automate these managerial tasks as much as possible. For that purpose Github actions is created (Tutorial follows below)
 
-**Practical Thought on GitHub**
+## Practical Thought on GitHub
 
 Suppose 10 members are working in a project. New changes will be happening very usual (CR – Change request). There will be a ‘main’ branch where all the stable codes and files associated with the project will be merged. This main branch will be deployed in the production. If any member needs to make any changes in the code, will they directly do into this main branch? If they do, it will create conflicts, bugs and chaos. Suppose sprint 1 is going on where 10 stories are there which will be divided among the developers. In order to avoid the above-mentioned issue, developers will create a branch which will be the copy of main branch and each developer can work independently on their stories. This process is called cloning the branch.
 
@@ -58,7 +57,7 @@ The above explained is one strategy. In practical, there will be a single source
 
 Create an efficient and easy README file using readme.so/ <https://www.youtube.com/watch?v=QcZKsbgsLa4>
 
-**Github basic operations**
+## Github basic operations
 
 1.  Create Github profile
 2.  Create a new repository in public mode
@@ -73,7 +72,7 @@ Create an efficient and easy README file using readme.so/ <https://www.youtube.c
 11. Goto CMD Use command ‘git clone \<copied URL\>’
 12. Copy the ipynb and pkl file we created to this cloned repo
 
-**Git basic commands**
+## Git basic commands
 
 **git config –global user.name “Bonny Philip”**
 
@@ -120,7 +119,7 @@ Once the merging is done we don’t need to add or commit the files cos that is 
 -   **Delete the branch**
 -   **git branch -d dev1** \#verify the deletion using ‘git branch’
 
-**Other important git commands**
+## Other important git commands
 
 -   **git branch** \# now the o/p would be master which is the default branch created while creating a repo.
 -   **git branch -M main** \# now the o/p of ‘git branch’ would be main. Changed master to main branch
@@ -137,7 +136,7 @@ Once the merging is done we don’t need to add or commit the files cos that is 
 5.  With the "New" button in the PATH editor, add C:\\Program Files\\Git\\bin\\ and C:\\Program Files\\Git\\cmd\\ to the end of the list.
 6.  Close and re-open your console.
 
-**How to participate in open source community ?**
+## How to participate in open source community ?
 
 We have a repo (eg: bonny/deep_learning_project ) and we need 5-6 developers to work over here as collaborators. Settings Collaborators Add email id of a collaborator. Collaborator will receive an invitation request in mail. Suppose steffy is the collaborator. Once she accepts this invitation, she can see the repo in her git hub profile. She can use ‘fork’ feature to clone this repo to her’s. Resultant repo would be Steffy/deep_learning_project forked from bonny/deep_learning_project. Go to code copy the URL. Goto cmd clone the repo to local machine using git clone command. She can make some changes in the code. After the changes being made, she needs to go to terminal go to main branch do add, commit and push commands Go to git hub. It would be shown “This branch is 1 commit ahead of bonny:main” Go to pull request and create new pull request. Bonny will be able to see the pull request in his git hub. He can check the changes made by steffy. Then he can do merge pull request.
 
@@ -153,7 +152,7 @@ Conflict scenario 1 : Bonny has made changes. Now Bonny is one commit ahead of S
 -   **Steffy should raise pull request. -** Bonny will be able to see the pull request in his git hub. He can check the changes made by steffy. Then he can do merge pull request in git hub itself.
 -   Once merging completed from Bonny’s side, main branch is updated with all the changes made by Bonny and Steffy. No Steffy’s branch needs to be in sync with Bonny’s main branch. So steffy needs to do **Synch Fork Update branch**
 
-**Resolving conflict scenarios**
+## Resolving conflict scenarios
 
 Say I have a repo having main as default branch. Create a new branch dev ie we have taken a copy of main branch. When we make changes in dev env, we need to raise PR to the main in order to merge. But at the time of pull request, there might have changes happened with main branch cos other team members might have merged their code with the main. Which means dev branch is behind the main updates and dev is trying to merge with the main. This creates a conflict.
 
@@ -175,9 +174,9 @@ We were able to raise the PR and merge it with main without any issue just cos, 
 
 Now lets see both dev and main are working in same file index.txt. First lets merge dev with main in order to appear index.txt in dev as well. Lets say we have dev has edited the index.txt. Same time, main has edited the same file from desktop and committed. If we go to dev branch in desktop we can see “This branch is n commits behind main”
 
-**Github operations in Linux**
+## Github operations in Linux
 
-**Creating repository in Git**
+### Creating repository in Git
 
 **There are 2 methods :**
 
@@ -197,7 +196,7 @@ Now lets see both dev and main are working in same file index.txt. First lets me
 1.  **Cloning a remote repo**
 -   git clone \<URL\>
 
-**Check Repository history**
+### Check Repository history
 
 -   git log - show all the commits and other details. Enter q button to exit
 -   git log --oneline - short version of logs
@@ -206,7 +205,7 @@ Now lets see both dev and main are working in same file index.txt. First lets me
 -   git log --patch - detailed stat, ie lines which are modified in files.
 -   **git log --oneline --graph –all - show all the commits and changes made in all branches**
 
-**Doing Commits**
+### Doing Commits
 
 git add – will move the modified file from working directory to the staging area
 
@@ -218,19 +217,19 @@ git commit
 -   git commit - opens a text editor to write about commits. Files added to staging location will be committed.
 -   git commit -m “this ” - directly writing message instead opening an editor
 
-**Git Restore**
+### Git Restore
 
 -   git restore - command will unstage or even discards uncommitted local changes
 -   git restore --staged - removes the file from the staging area, but leaves its actual modifications untouched.
 
-**Git Ignore**
+### Git Ignore
 
 The .*gitignore* file is a text file that tells git which files or folders to ignore in a project. A local .gitignore file is usually placed in the root directory of a project. The entries in this file can also follow a matching pattern.
 
 -   \* is used as a wildcard match
 -   \# is used to add comments to a .gitignore file
 
-**Tagging**
+### Tagging
 
 Tagging is a mechanism used to create a snap shot of a git repository. It is traditionally used to create semantic version number identifier tags that correspond to software release cycles. Say we have 12 commits happened in a project and we want to make first 7 commits as v1.0 and upto 12 v2.0 then we will make use of tags. There are two types of tagging;
 
@@ -255,7 +254,7 @@ Suppose we have made some changes in files, and commited it. Git log shows, ther
 -   git log --oneline - will show the details
 -   git tag -d v0.0.4 - will delete the tag
 
-**Branching**
+### Branching
 
 Branches allow you to work on different parts of the project without impacting the main branch. when the work is complete the branch can be merged with the main project. You can even switch between branches and work on different projects without them interfering with each other.
 
@@ -267,13 +266,13 @@ Branches allow you to work on different parts of the project without impacting t
 -   git switch -c dev3 - creation of new branch and switching there simultaneously
 -   git branch -d dev3 - deleting a branch
 
-**Merging**
+### Merging
 
 Note : Open both VS code and terminal to see changes.
 
 ![](media/d3ef525cdf90448df31880283cd6650b.png)
 
-Explaination :
+Explanation :
 
 -   we have a main branch and dev branch
 -   we have created a new branch ‘feature’ and directed to switched there. In VS code also switching will automatically happens
@@ -289,7 +288,7 @@ Note : before merging, HEAD was at master branch. Once we made 3 commits in feat
 
 There are two types of merging; fast forward merging and regular merging. Here ‘feature’ branch is aligned with the master so merging done is called fast forward merging. Dev branch is diverged and merging of this branch to master is called as regular merging.
 
-**Remote Repository cloning**
+### Remote Repository cloning
 
 1.  git clone \<connection string in the format of http\>
     1.  git clone \<ssh link in the format of git@...\>
@@ -300,11 +299,11 @@ There are two types of merging; fast forward merging and regular merging. Here �
 
     2.  download as zip
 
-**Working with remote directory**
+### Working with remote directory
 
 ![](media/d1f7014c2467f19837260423e7efd7ed.png)
 
-**Pull Requests**
+### Pull Requests
 
 While working in a big team, its not a good practice to merge your work directly into the main branch. Once a pull request is opened you can discuss and review the potential changes with collaborators and add follow up commits before your changes are merged into the base or master branch.
 
@@ -320,7 +319,7 @@ While working in a big team, its not a good practice to merge your work directly
 -   After creating a pull request, check for conflicts and merge the pull request with master branch
 -   Now we can see new_text.txt in both dev5 and master branches.
 
-**Chery picking**
+### Chery picking
 
 This is for applying some commit from one branch into another branch. When we do cherry picking, it brings in changes from a specific commit or we choose one or more commits.
 
@@ -330,9 +329,9 @@ This is for applying some commit from one branch into another branch. When we do
 -   Switch to master. Run git log --oneline to find the recent commits and its respective SHA ids
 -   Git cherry-pick \<sha id of required commit\> \<sha id of required commit\> …
 
-**GitHub Actions**
+## GitHub Actions
 
-**Introduction**
+### Introduction
 
 -   Platform to automate software development workflows
 -   CI/CD is one of many workflows
@@ -367,7 +366,7 @@ Step 1: Push all the project files into the repository
 
 3: Once the yaml file is created, initiate commit changes (adviceable to create new branch for this commit and start a pull request). We can see the build happening status.
 
-**Workflow file syntax**
+### Workflow file syntax
 
 ![](media/8e1f34958b8185195f914ec801641a68.png)
 
@@ -387,7 +386,7 @@ uses: actions/checkout@v2 - Whenever we want to build or test application, first
 
 Go to github.com/actions we can see predefined repositories.
 
-**Jobs**
+### Jobs
 
 ![](media/6108acbde97d29318b1325decebff668.png)
 
@@ -401,7 +400,7 @@ servers makes available for workflows by Github is available in ubuntu, windows 
 
 ![](media/18c70b2ea994e669fa6434dbad406d16.png)
 
-**Build docker image and push to private repo**
+### Build docker image and push to private repo
 
 Say we have a private repo in docker hub which already contains two images. **Now if we want to add one more image via git hub action, first include the job in yaml file.**
 
